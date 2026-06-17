@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">EventHub</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Discover Amazing Events</h2>
+            <p>Find and register for upcoming events in your area</p>
+            <a href="#events" class="btn-primary">View Events</a>
+        </div>
+    </section>
+
+    <section id="events" class="events-section">
+        <div class="container">
+            <h2>Upcoming Events</h2>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="music">Music</button>
+                <button class="filter-btn" data-filter="tech">Technology</button>
+                <button class="filter-btn" data-filter="food">Food & Drink</button>
+            </div>
+            <div class="events-grid" id="events-grid">
+                <!-- Event cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About EventHub</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>EventHub is your premier destination for discovering and attending exciting events. We connect event organizers with attendees to create memorable experiences.</p>
+                    <p>Our platform features a wide variety of events ranging from music festivals and tech conferences to food festivals and community gatherings.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/about_eventhub.png" alt="EventHub team collaborating on event planning" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="event-interest">Event Interest</label>
+                    <select id="event-interest" name="event-interest">
+                        <option value="">Select an event type</option>
+                        <option value="music">Music Events</option>
+                        <option value="tech">Technology Events</option>
+                        <option value="food">Food & Drink Events</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+            <div id="form-response" class="form-response"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 EventHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for event details -->
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h3 id="modal-title"></h3>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image"></div>
+                <p id="modal-description"></p>
+                <div class="modal-meta">
+                    <p><strong>Date:</strong> <span id="modal-date"></span></p>
+                    <p><strong>Time:</strong> <span id="modal-time"></span></p>
+                    <p><strong>Location:</strong> <span id="modal-location"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

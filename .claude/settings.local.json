@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(run)",
+      "Bash(npx chromium-cli *)",
+      "Bash(python *)",
+      "Bash(curl -s http://localhost:8080)",
+      "Bash(curl -s http://localhost:8080/style.css)",
+      "Bash(curl -s http://localhost:8080/script.js)"
+    ]
+  }
+}
